@@ -12,7 +12,7 @@ import (
 	ibcante "github.com/cosmos/ibc-go/v5/modules/core/ante"
 	ibckeeper "github.com/cosmos/ibc-go/v5/modules/core/keeper"
 
-	ethante "github.com/evmos/ethermint/app/ante"
+	ethante "./ethante"
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
 
 	vestingtypes "github.com/evmos/evmos/v10/x/vesting/types"
