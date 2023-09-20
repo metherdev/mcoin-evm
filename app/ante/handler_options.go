@@ -14,6 +14,7 @@ import (
 
 	ethante "github.com/evmos/ethermint/app/ante"
 	evmtypes "github.com/evmos/ethermint/x/evm/types"
+	evmante "github.com/evmos/evmos/v10/app/ante/evm/ante"
 
 	vestingtypes "github.com/evmos/evmos/v10/x/vesting/types"
 )
@@ -72,7 +73,7 @@ func newEthAnteHandler(options HandlerOptions) sdk.AnteHandler {
 		NewEthVestingTransactionDecorator(options.AccountKeeper),
 		ethante.NewEthGasConsumeDecorator(options.EvmKeeper, options.MaxTxGasWanted),
 		ethante.NewEthIncrementSenderSequenceDecorator(options.AccountKeeper),
-		ethante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
+		evmante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
 		ethante.NewEthEmitEventDecorator(options.EvmKeeper), // emit eth tx hash and index at the very last ante handler.
 	)
 }
@@ -97,7 +98,7 @@ func newCosmosAnteHandler(options HandlerOptions) sdk.AnteHandler {
 		ante.NewSigVerificationDecorator(options.AccountKeeper, options.SignModeHandler),
 		ante.NewIncrementSequenceDecorator(options.AccountKeeper),
 		ibcante.NewRedundantRelayDecorator(options.IBCKeeper),
-		ethante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
+		evmante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
 	)
 }
 
@@ -122,6 +123,6 @@ func newLegacyCosmosAnteHandlerEip712(options HandlerOptions) sdk.AnteHandler {
 		ethante.NewLegacyEip712SigVerificationDecorator(options.AccountKeeper, options.SignModeHandler),
 		ante.NewIncrementSequenceDecorator(options.AccountKeeper),
 		ibcante.NewRedundantRelayDecorator(options.IBCKeeper),
-		ethante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
+		evmante.NewGasWantedDecorator(options.EvmKeeper, options.FeeMarketKeeper),
 	)
 }
