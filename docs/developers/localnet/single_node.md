@@ -89,7 +89,7 @@ Before starting the chain, you need to populate the state with at least one acco
 mcoind keys add my_validator
 ```
 
-Once you have created a local account, go ahead and grant it some `mcoin` tokens in your chain's genesis file. Doing so will also make sure your chain is aware of this account's existence:
+Once you have created a local account, go ahead and grant it some `amcoin` tokens in your chain's genesis file. Doing so will also make sure your chain is aware of this account's existence:
 
 ```bash
 mcoind add-genesis-account my_validator 10000000000pose
