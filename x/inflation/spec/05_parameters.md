@@ -8,8 +8,8 @@ The `x/inflation` module contains the parameters described below. All parameters
 can be modified via governance.
 
 | Key                                   | Type                   | Default Value                                                                 |
-| ------------------------              | ---------------------- | ----------------------------------------------------------------------------- |
-| `ParamStoreKeyMintDenom`              | string                 | `evm.DefaultEVMDenom` // “mcoin”                                             |
+| ------------------------              | ---------------------- |-------------------------------------------------------------------------------|
+| `ParamStoreKeyMintDenom`              | string                 | `evm.DefaultEVMDenom` // “amcoin”                                             |
 | `ParamStoreKeyExponentialCalculation` | ExponentialCalculation | `A: sdk.NewDec(int64(300_000_000))`                                           |
 |                                       |                        | `R: sdk.NewDecWithPrec(50, 2)`                                                |
 |                                       |                        | `C: sdk.NewDec(int64(9_375_000))`                                             |

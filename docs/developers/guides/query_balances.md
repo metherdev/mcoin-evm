@@ -40,7 +40,7 @@ where:
 - (optional) `$OUTPUT` is the output format (eg. `text`).
 - (optional if running local node) `$NODE` is the Tendermint RPC node information is requested from (eg. `https://tendermint.bd.evmos.org:26657`).
 
-Details of non-native currencies (ie. not `mcoin`) can be queried with the following CLI command:
+Details of non-native currencies (ie. not `amcoin`) can be queried with the following CLI command:
 
 ```bash
 $ mcoind query erc20 token-pair $DENOM --node=$NODE --height=$HEIGHT --output=$OUTPUT
@@ -55,7 +55,7 @@ where `$DENOM` is the denomination of the coin (eg. `ibc/ED07A3391A1...`).
 
 ## JSON-RPC
 
-Developers can query account balances of `mcoin` using the [`eth_getBalance`](../json-rpc/endpoints.md#ethgetbalance) JSON-RPC method in conjunction with [`curl`](https://curl.se/):
+Developers can query account balances of `amcoin` using the [`eth_getBalance`](../json-rpc/endpoints.md#ethgetbalance) JSON-RPC method in conjunction with [`curl`](https://curl.se/):
 
 ```bash
 # Request

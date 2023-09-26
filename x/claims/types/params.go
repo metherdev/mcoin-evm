@@ -14,7 +14,7 @@ import (
 
 var (
 	// DefaultClaimsDenom is mcoin
-	DefaultClaimsDenom = "mcoin"
+	DefaultClaimsDenom = "amcoin"
 	// DefaultDurationUntilDecay is 1 month = 30.4375 days
 	DefaultDurationUntilDecay = 2629800 * time.Second
 	// DefaultDurationOfDecay is 2 months
